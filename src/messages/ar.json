@@ -330,10 +330,21 @@
       "eyebrow": "تواصل معنا",
       "title": "كيف نقدر نخدمك ؟",
       "description": "شاركنا التفاصيل، وفريقنا يكمل معك من هنا.",
-      "name": "اسمك",
+      "name": "الاسم",
       "namePlaceholder": "اكتب اسمك",
-      "email": "بريد العمل",
+      "email": "البريد الإلكتروني",
       "emailPlaceholder": "name@company.com",
+      "phone": "رقم الجوال",
+      "phonePlaceholder": "+966 5X XXX XXXX",
+      "interest": "الاهتمام",
+      "interestPlaceholder": "اختر الاهتمام",
+      "interests": {
+        "ai_powered_solutions": "حلول مدعومة بالذكاء الاصطناعي",
+        "saas": "البرمجيات كخدمة (SaaS)",
+        "mobile_applications": "تطبيقات الجوال",
+        "erp_pos": "نظام ERP ونقاط البيع",
+        "management_systems": "أنظمة الإدارة"
+      },
       "message": "كيف نقدر نساعدك؟",
       "messagePlaceholder": "علّمنا عن مشروعك أو الحل اللي تدور عليه...",
       "submit": "أرسل استفسارك",
@@ -341,10 +352,13 @@
       "success": "شكرًا لتواصلك، بنرجع لك قريب.",
       "error": "ما قدرنا نرسل استفسارك. حاول مرة ثانية.",
       "unavailable": "خدمة التواصل مو جاهزة للإرسال للحين. حاول مرة ثانية بعدين.",
+      "rateLimited": "وصلنا طلبات كثيرة قبل شوي. انتظر دقائق وحاول مرة ثانية.",
       "validation": {
         "nameRequired": "اكتب اسمك بحرفين على الأقل.",
         "nameTooLong": "الاسم لازم يكون 100 حرف أو أقل.",
         "emailInvalid": "تأكد من كتابة بريد إلكتروني صحيح.",
+        "phoneInvalid": "أدخل رقم جوال صحيح.",
+        "interestRequired": "اختر نوع الاهتمام.",
         "messageTooShort": "اكتب لنا 20 حرف على الأقل.",
         "messageTooLong": "الرسالة لازم تكون 5000 حرف أو أقل."
       }

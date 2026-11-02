@@ -330,10 +330,21 @@
       "eyebrow": "Get in touch",
       "title": "How can we help?",
       "description": "Share a few details and our team will take it from there.",
-      "name": "Your name",
+      "name": "Name",
       "namePlaceholder": "Name",
-      "email": "Work email",
+      "email": "Email",
       "emailPlaceholder": "you@company.com",
+      "phone": "Phone",
+      "phonePlaceholder": "+966 5X XXX XXXX",
+      "interest": "Interest",
+      "interestPlaceholder": "Select an interest",
+      "interests": {
+        "ai_powered_solutions": "AI Powered Solutions",
+        "saas": "Software as a Service (SaaS)",
+        "mobile_applications": "Mobile Applications",
+        "erp_pos": "ERP & POS System",
+        "management_systems": "Management Systems"
+      },
       "message": "How can we help?",
       "messagePlaceholder": "Tell us about your project or what you’re looking for...",
       "submit": "Send inquiry",
@@ -341,10 +352,13 @@
       "success": "Thanks for reaching out. We’ll be in touch soon.",
       "error": "We couldn’t send your inquiry. Please try again.",
       "unavailable": "Our contact service isn’t set up yet. Please try again later.",
+      "rateLimited": "Too many inquiries were sent just now. Please wait a few minutes and try again.",
       "validation": {
         "nameRequired": "Please enter at least 2 characters.",
         "nameTooLong": "Name must be 100 characters or fewer.",
         "emailInvalid": "Enter a valid email address.",
+        "phoneInvalid": "Enter a valid phone number.",
+        "interestRequired": "Select what you’re interested in.",
         "messageTooShort": "Please share at least 20 characters.",
         "messageTooLong": "Message must be 5,000 characters or fewer."
       }
