@@ -1,0 +1,450 @@
+{
+  "brand": {
+    "name": "Anan",
+    "descriptor": "Sustainability"
+  },
+  "hero": {
+    "eyebrow": "Digital solutions for sustainability",
+    "title": "Integrated digital solutions for <accent>business growth</accent> and digital transformation.",
+    "description": "From concept to launch and scale, we build applications, platforms, and digital systems that help organizations operate with greater efficiency and expand with confidence.",
+    "primaryCta": "Talk to our team",
+    "secondaryCta": "Explore our services",
+    "caption": "Built for business. Designed for long-term impact."
+  },
+  "about": {
+    "eyebrow": "About Us",
+    "title": "Transforming ideas and operational challenges into scalable digital solutions.",
+    "description": "Anan Sustainability is a Saudi company specializing in providing integrated digital solutions. We help companies, entrepreneurs, and government entities adopt and accelerate digital transformation through the design and development of innovative technical solutions that contribute to improving business efficiency, automating processes, enhancing customer experience, and boosting growth and expansion.",
+    "link": "See how we work",
+    "visual": {
+      "wordmark": "Anan",
+      "caption": "Technology with purpose"
+    },
+    "principles": {
+      "solutions": {
+        "title": "Scalable digital solutions",
+        "description": "We turn ideas and operational challenges into scalable digital solutions."
+      },
+      "business": {
+        "title": "Business understanding",
+        "description": "We combine an understanding of business needs with technical expertise to turn ideas and operational challenges into practical, secure, and scalable digital products and platforms."
+      },
+      "partnership": {
+        "title": "Ongoing partnership",
+        "description": "We support clients at every stage—from needs analysis through design, development, and integration to launch, maintenance, and ongoing technical support."
+      }
+    }
+  },
+  "visionMission": {
+    "title": "Our vision and mission",
+    "description": "Digital ambition begins with understanding reality and creating opportunities for growth.",
+    "vision": {
+      "title": "Our vision",
+      "description": "To be the trusted technology partner for ambitious companies and organizations in Saudi Arabia and the Gulf, building innovative, practical, and scalable digital solutions.",
+      "imageAlt": "Futuristic city representing our vision for digital transformation and growth"
+    },
+    "mission": {
+      "title": "Our mission",
+      "description": "To empower our clients to achieve their operational and commercial goals through integrated digital solutions, designed around their real needs and backed by trusted technical and advisory expertise.",
+      "imageAlt": "Rocket launching through a digital network, representing our mission to enable growth"
+    }
+  },
+  "achievements": {
+    "title": "Our Achievements",
+    "clients": {
+      "title": "Clients in consulting",
+      "description": "Understanding challenges and providing strategic business analysis solutions."
+    },
+    "projects": {
+      "title": "Projects delivered",
+      "description": "Delivering and developing integrated digital technology projects across diverse sectors."
+    },
+    "incubator": {
+      "title": "Projects through the virtual lab",
+      "description": "Affiliated with Monsha'at to support entrepreneurship."
+    },
+    "independent": {
+      "title": "Other technology projects",
+      "description": "For clients and partners beyond the lab."
+    },
+    "expertise": {
+      "title": "Diverse technical expertise",
+      "description": "We deliver a range of projects spanning mobile applications, SaaS platforms, e-commerce, tracking systems, automation, and systems integration."
+    },
+    "team": {
+      "title": "A multidisciplinary team",
+      "description": "Our collaborative team brings together operations management, sales development, expert consulting, and professional engineering to help ensure project success."
+    }
+  },
+  "whoWeServe": {
+    "eyebrow": "Who We Serve",
+    "title": "We serve businesses and organizations at every stage, <accent>from the first idea to large enterprises.</accent>",
+    "marketLabel": "Our target market:",
+    "market": "Saudi Arabia and the Gulf region",
+    "audiences": {
+      "entrepreneurs": "Entrepreneurs and digital innovators.",
+      "startups": "Startups.",
+      "smallBusinesses": "Small and medium-sized businesses.",
+      "largeBusinesses": "Large companies and business groups.",
+      "industrial": "Factories and operational facilities.",
+      "government": "Government and semi-government entities.",
+      "automation": "Organizations looking to automate their operations."
+    }
+  },
+  "ourValues": {
+    "eyebrow": "The Value We Create",
+    "statement": "“We do more than build an app or website; we build <accent>digital solutions that serve business goals.</accent>”",
+    "imageAlt": "Digital dashboard displaying business analytics and performance metrics",
+    "efficiency": {
+      "title": "Operational efficiency",
+      "description": "Improve operational efficiency, reduce manual work, and connect systems."
+    },
+    "clarity": {
+      "title": "Clearer decisions",
+      "description": "Give leadership a clearer view through accurate data and comprehensive dashboards."
+    },
+    "experience": {
+      "title": "Customer experience and growth",
+      "description": "Improve the customer experience and build products ready for future growth."
+    }
+  },
+  "services": {
+    "eyebrow": "What We Offer",
+    "title": "Digital services that cover the entire project journey",
+    "description": "From idea to final product and ongoing operations, we combine product development, technical integration, and operational optimization.",
+    "cards": {
+      "workflows": {
+        "title": "Integration & APIs",
+        "description": "Linking payments, messaging, and services through APIs."
+      },
+      "platforms": {
+        "title": "Product & Platform Development",
+        "description": "Mobile apps, web platforms, SaaS, portals, ERP, and dashboards."
+      },
+      "data": {
+        "title": "AI & Automation",
+        "description": "AI agents that automate customer service and operations."
+      },
+      "analytics": {
+        "title": "Cloud & Operations",
+        "description": "AWS, Azure, GCP, IoT, DevOps, plus testing and support."
+      },
+      "reporting": {
+        "title": "Design & Consulting",
+        "description": "UI/UX design, business analysis, and a digital roadmap."
+      }
+    },
+    "visual": {
+      "tagNew": "New",
+      "tagReviewed": "Reviewed",
+      "notifications": {
+        "first": {
+          "title": "Payment Linked",
+          "time": "Today, 14:00"
+        },
+        "second": {
+          "title": "Alerts Delivered",
+          "time": "Today, 11:20"
+        },
+        "third": {
+          "title": "Services Synced",
+          "time": "Yesterday, 18:45"
+        }
+      },
+      "ai": "AI",
+      "design": {
+        "title": "UI/UX Design",
+        "description": "Clear interfaces that adapt to every screen!",
+        "note": "Analysis turns into a clear digital roadmap.",
+        "defaultAction": "Default",
+        "boldAction": "Bold"
+      }
+    },
+    "showPoints": "Show details",
+    "hidePoints": "Hide details",
+    "groups": {
+      "g1": "Product & Digital Platform Development",
+      "g2": "Integration & Technical Infrastructure",
+      "g3": "Intelligence & Operational Improvement"
+    },
+    "points": {
+      "workflows": {
+        "integration": "System integration and API integrations.",
+        "payments": "Connecting payment, messaging, notification, and external services."
+      },
+      "platforms": {
+        "mobile": "Mobile app development for iOS and Android.",
+        "web": "Website and web platform development.",
+        "saas": "SaaS platforms and digital products.",
+        "portals": "Customer portals and internal systems.",
+        "erp": "ERP systems for factories and companies.",
+        "dashboards": "Dashboards and operational reports."
+      },
+      "data": {
+        "ai": "AI solutions and automation.",
+        "agents": "AI agents for customer service and operations."
+      },
+      "analytics": {
+        "iot": "Tracking solutions and IoT-connected platforms.",
+        "cloud": "Cloud services and infrastructure on AWS, Azure, and GCP.",
+        "devops": "DevOps, release management, and operational continuity.",
+        "qa": "Quality assurance, testing, maintenance, and technical support."
+      },
+      "reporting": {
+        "analysis": "Business analysis and identifying digital transformation opportunities.",
+        "uiux": "User experience and interface design (UI/UX).",
+        "consulting": "Technical consulting and building the digital roadmap."
+      }
+    }
+  },
+  "experienceProjects": {
+    "title": "Our Experience & Projects",
+    "description": "We have contributed to developing and delivering projects across mobile apps, operational platforms, e-commerce, automation, and consulting.",
+    "newTab": "(opens in a new tab)",
+    "projects": {
+      "cardsEcommerce": {
+        "tag": "E-Commerce",
+        "name": "Cards E-Commerce",
+        "description": "An e-commerce platform supporting digital sales and customer experience management."
+      },
+      "trackingCamel": {
+        "tag": "IoT & Platform",
+        "name": "Tracking Camel",
+        "description": "A dedicated platform for camel tracking and managing related data and operations."
+      },
+      "gymTech": {
+        "tag": "App & Platform",
+        "name": "GymTech",
+        "description": "A mobile app and platform for managing and operating sports services and activities."
+      },
+      "handmade": {
+        "tag": "Mobile App",
+        "name": "Handmade",
+        "description": "A mobile app delivering a user-focused digital experience and services through the phone."
+      },
+      "ananServices": {
+        "tag": "SaaS Platform",
+        "name": "Anan Services",
+        "description": "Anan's platform for service businesses, bringing operations, customers, bookings, payments, and reports together in one place."
+      },
+      "bibanTracking": {
+        "tag": "Tracking System",
+        "name": "Biban Tracking",
+        "description": "A visitor tracking system for Biban that supports data and operations management."
+      },
+      "whatsappAiAgent": {
+        "tag": "AI Automation",
+        "name": "WhatsApp AI Agent",
+        "description": "A solution for intelligent replies, conversation automation, and customer service through WhatsApp."
+      }
+    }
+  },
+  "features": {
+    "eyebrow": "Why Anan Sustainability ?",
+    "title": "A tech partner that understands business, not just a service provider.",
+    "description": "Thoughtful features help your team stay organized, collaborate confidently, and keep important work moving.",
+    "cards": {
+      "smartDaily": {
+        "title": "Integrated solutions",
+        "description": "from consultation and planning all to continuous post-launch support."
+      },
+      "encryptedTasks": {
+        "title": "Market understanding",
+        "description": "awareness of the needs and requirements of the Saudi and Gulf markets."
+      },
+      "complianceReady": {
+        "title": "Flexibility and scalability",
+        "description": "solutions tailored to the client's size and maturity, scaling as the business grows."
+      },
+      "teamSync": {
+        "title": "User experience and quality",
+        "description": "a strong focus on user experience, product quality, and operational clarity."
+      },
+      "analytics": {
+        "title": "Bridging business and tech",
+        "description": "expertise blending daily operations, business analysis, and technical development."
+      },
+      "support": {
+        "title": "Communication and follow-up",
+        "description": "clear, transparent communication and continuous follow-up throughout the project journey."
+      }
+    }
+  },
+  "howWeWork": {
+    "eyebrow": "Our Approach",
+    "title": "Clear steps from need to solution.",
+    "description": "We follow an organized methodology that ensures the technical solution is linked to business needs, and is scalable and ready for growth.",
+    "stepsLabel": "Our project process",
+    "steps": {
+      "discovery": {
+        "title": "Discovery",
+        "description": "Understanding the business model, challenges, and required outcomes."
+      },
+      "planning": {
+        "title": "Planning",
+        "description": "Translating the need into requirements and a roadmap."
+      },
+      "design": {
+        "title": "Design",
+        "description": "Designing User Experience and User Interfaces (UI/UX)."
+      },
+      "development": {
+        "title": "Development",
+        "description": "Building the solution and required technical integrations."
+      },
+      "launch": {
+        "title": "Launch",
+        "description": "Quality and performance testing before deployment."
+      },
+      "support": {
+        "title": "Support",
+        "description": "Maintenance and optimization to keep pace with business growth."
+      }
+    },
+    "visual": {
+      "workspace": "Project workspace",
+      "status": "In sync",
+      "journeyLabel": "A shared plan",
+      "journeyTitle": "From first conversation to lasting impact.",
+      "phases": {
+        "discovery": "Understand",
+        "build": "Build",
+        "launch": "Grow"
+      },
+      "collaboration": "Your team + Anan",
+      "teamInitial": "T",
+      "ananInitial": "A"
+    }
+  },
+  "contact": {
+    "eyebrow": "Start a conversation",
+    "title": "Let’s talk about what you’re building.",
+    "description": "Tell us a little about your goals. We’ll explore how a practical digital solution can support your team.",
+    "contactInfo": {
+      "phone": "+966 592 694 488",
+      "mail": "info@anansky.net",
+      "location": "Kingdom of Saudi Arabia - Riyadh"
+    },
+    "sideNote": "A clear conversation is a good place to start.",
+    "form": {
+      "eyebrow": "Get in touch",
+      "title": "How can we help?",
+      "description": "Share a few details and our team will take it from there.",
+      "name": "Your name",
+      "namePlaceholder": "Name",
+      "email": "Work email",
+      "emailPlaceholder": "you@company.com",
+      "message": "How can we help?",
+      "messagePlaceholder": "Tell us about your project or what you’re looking for...",
+      "submit": "Send inquiry",
+      "sending": "Sending...",
+      "success": "Thanks for reaching out. We’ll be in touch soon.",
+      "error": "We couldn’t send your inquiry. Please try again.",
+      "unavailable": "Our contact service isn’t set up yet. Please try again later.",
+      "validation": {
+        "nameRequired": "Please enter at least 2 characters.",
+        "nameTooLong": "Name must be 100 characters or fewer.",
+        "emailInvalid": "Enter a valid email address.",
+        "messageTooShort": "Please share at least 20 characters.",
+        "messageTooLong": "Message must be 5,000 characters or fewer."
+      }
+    }
+  },
+  "closingCta": {
+    "eyebrow": "Your next step starts here",
+    "title": "Turning Your Ideas Into Digital Reality.",
+    "description": "From concept to launch and growth, we build integrated digital solutions for greater efficiency and scalable business success.",
+    "primaryCta": "Start a conversation",
+    "secondaryCta": "Explore our services",
+    "hint": "Drag the orbs"
+  },
+  "footer": {
+    "brandHome": "Anan Sustainability home",
+    "description": "Practical digital solutions that help businesses move sustainability forward.",
+    "tagline": "Built for business. Designed for lasting impact.",
+    "columns": {
+      "company": "Company",
+      "connect": "Connect",
+      "explore": "Explore"
+    },
+    "links": {
+      "home": "Home",
+      "services": "Services",
+      "howWeWork": "How we work",
+      "contact": "Contact us",
+      "faq": "Frequently asked questions",
+      "startConversation": "Start a conversation",
+      "features": "Features",
+      "sustainability": "Sustainability",
+      "ourApproach": "Our approach"
+    },
+    "copyright": "© Anan Sustainability. All rights reserved.",
+    "backToTop": "Back to top",
+    "social": { "linkedin": "LinkedIn" }
+  },
+  "faq": {
+    "eyebrow": "Quick answers",
+    "title": "Frequently asked questions",
+    "description": "A few things teams often ask before getting started with Anan.",
+    "listLabel": "Frequently asked questions",
+    "items": {
+      "solutions": {
+        "question": "What does Anan Sustainability build?",
+        "answer": "We build practical digital products and SaaS solutions that help organizations manage sustainability work, make sense of their data, and improve day-to-day business processes."
+      },
+      "fit": {
+        "question": "Who are your solutions designed for?",
+        "answer": "We work with businesses and teams looking to make sustainability more manageable through useful digital tools. We start by learning about your organization, goals, and existing workflows."
+      },
+      "gettingStarted": {
+        "question": "How do we get started?",
+        "answer": "It starts with a conversation. We learn about the challenge you want to solve, discuss the people and systems involved, and agree on clear next steps before any work begins."
+      },
+      "customization": {
+        "question": "Can a solution be tailored to our needs?",
+        "answer": "We shape the approach around your goals and requirements. After learning about your needs, we’ll explain which parts can be configured or tailored and agree on the right scope together."
+      },
+      "data": {
+        "question": "How do you handle our data and security requirements?",
+        "answer": "We discuss your data, privacy, and security requirements during discovery, then clarify how they apply to the proposed solution. Specific controls and responsibilities are agreed before implementation."
+      },
+      "timing": {
+        "question": "How long does a project take, and what does it cost?",
+        "answer": "Timing and cost depend on the scope, integrations, and requirements. We clarify the work, milestones, and commercial details with you before moving forward."
+      }
+    },
+    "moreQuestions": "Have a question that isn’t covered here?",
+    "contactLink": "Talk to our team"
+  },
+  "common": {
+    "skipToContent": "Skip to content",
+    "loading": "Loading"
+  },
+  "navigation": {
+    "companyName": "Anan Sustainability",
+    "mainNavigation": "Main navigation",
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "products": "Products",
+    "saas": "Software as a Service (SaaS)",
+    "whatsappAiAgent": "WhatsApp AI Agent",
+    "howWeWork": "How we work",
+    "contact": "Contact",
+    "menu": "Menu",
+    "close": "Close",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu",
+    "switchLanguageToArabic": "Switch language to Arabic",
+    "switchLanguageToEnglish": "Switch language to English"
+  },
+  "errors": {
+    "generic": "Something went wrong. Please try again.",
+    "retry": "Try again",
+    "notFound": "This page could not be found."
+  },
+  "metadata": {
+    "title": "Anan Sustainability",
+    "description": "SaaS solutions for businesses building a more sustainable future."
+  }
+}

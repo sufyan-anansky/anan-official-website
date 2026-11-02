@@ -1,0 +1,1374 @@
+:root {
+  color-scheme: dark;
+  --color-surface: #131315;
+  --color-surface-dim: #131315;
+  --color-surface-bright: #39393b;
+  --color-surface-container-lowest: #0e0e10;
+  --color-surface-container-low: #1c1b1d;
+  --color-surface-container: #201f22;
+  --color-surface-container-high: #2a2a2c;
+  --color-surface-container-highest: #353437;
+  --color-on-surface: #e5e1e4;
+  --color-on-surface-variant: #bbcabf;
+  --color-inverse-surface: #e5e1e4;
+  --color-inverse-on-surface: #313032;
+  --color-outline: #86948a;
+  --color-outline-variant: #3c4a42;
+  --color-surface-tint: #4edea3;
+  --color-primary: #4edea3;
+  --color-on-primary: #003824;
+  --color-primary-container: #10b981;
+  --color-on-primary-container: #00422b;
+  --color-inverse-primary: #006c49;
+  --color-secondary: #c6c5cf;
+  --color-on-secondary: #2f3038;
+  --color-secondary-container: #4a4b53;
+  --color-on-secondary-container: #bcbbc5;
+  --color-tertiary: #91db2a;
+  --color-on-tertiary: #1f3700;
+  --color-tertiary-container: #72b400;
+  --color-on-tertiary-container: #254000;
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+  --color-primary-fixed: #6ffbbe;
+  --color-primary-fixed-dim: #4edea3;
+  --color-on-primary-fixed: #002113;
+  --color-on-primary-fixed-variant: #005236;
+  --color-secondary-fixed: #e3e1ec;
+  --color-secondary-fixed-dim: #c6c5cf;
+  --color-on-secondary-fixed: #1a1b22;
+  --color-on-secondary-fixed-variant: #46464e;
+  --color-tertiary-fixed: #acf847;
+  --color-tertiary-fixed-dim: #91db2a;
+  --color-on-tertiary-fixed: #102000;
+  --color-on-tertiary-fixed-variant: #304f00;
+  --color-background: #131315;
+  --color-on-background: #e5e1e4;
+  --color-surface-variant: #353437;
+  --color-carbon-base: #09090b;
+  --color-carbon-surface: #111113;
+  --color-carbon-elevated: #18181b;
+  --color-border-hairline: #27272a;
+  --color-border-subtle: #3f3f46;
+  --color-text-pure: #fafafa;
+  --color-text-muted: #a1a1aa;
+  --color-text-dim: #71717a;
+  --color-accent-emerald: #10b981;
+  --color-accent-leaf: #22c55e;
+  --color-accent-lime: #84cc16;
+  --color-glow-emerald: rgb(16 185 129 / 12%);
+  --color-navigation-backdrop: rgb(9 9 11 / 80%);
+  --color-navigation-glass: rgb(17 17 19 / 76%);
+  --shadow-navigation-glass: 0 0 24px rgb(16 185 129 / 18%);
+  --space-2xs: 0.125rem;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+  --space-5xl: 8rem;
+  --grid-gutter: 1.5rem;
+  --grid-margin: 2rem;
+  --grid-margin-tablet: 1.5rem;
+  --grid-margin-mobile: 1rem;
+  --container-max: 90rem;
+  --touch-target-min: 2.75rem;
+  --navbar-height: 5rem;
+  --navbar-layer: 40;
+  --navigation-overlay-layer: 50;
+  --radius-sm: 0.125rem;
+  --radius-default: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-full: 9999px;
+  --glass-fill: 0.1;
+  --glass-blur: 14px;
+  --glass-saturate: 1.7;
+  --glass-spec: 0.14;
+  --glass-rim-strong: color-mix(in srgb, var(--color-primary) 55%, transparent);
+  --glass-rim-soft: color-mix(in srgb, var(--color-primary) 12%, transparent);
+  --glass-chip-bg: color-mix(
+    in srgb,
+    var(--color-primary) 6%,
+    var(--color-carbon-surface)
+  );
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: var(--color-carbon-base);
+  scroll-behavior: smooth;
+  scroll-padding-block-start: var(--navbar-height);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: var(--color-carbon-base);
+  color: var(--color-text-pure);
+  font-family: var(--font-body), sans-serif;
+}
+
+html[lang="ar"] body {
+  font-family: var(--font-arabic), sans-serif;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+::selection {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+@layer components {
+  .container-shell {
+    width: 100%;
+    max-width: var(--container-max);
+    margin-inline: auto;
+    padding-inline: var(--grid-margin-mobile);
+  }
+
+  .section-shell {
+    scroll-margin-block-start: var(--navbar-height);
+    padding-block: var(--space-4xl);
+  }
+
+  .button {
+    display: inline-flex;
+    min-height: var(--touch-target-min);
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    border: 1px solid transparent;
+    border-radius: var(--radius-default);
+    padding-inline: var(--space-lg);
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    outline-offset: 3px;
+    @apply font-body text-body-md;
+  }
+
+  .button:focus-visible {
+    outline: 2px solid var(--color-primary);
+  }
+
+  .button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  .button--primary {
+    border-color: var(--color-accent-emerald);
+    background: var(--color-carbon-surface);
+    color: var(--color-text-pure);
+  }
+
+  .button--primary:hover:not(:disabled) {
+    background: var(--color-accent-emerald);
+    color: var(--color-carbon-base);
+  }
+
+  .button--secondary {
+    border-color: var(--color-border-hairline);
+    background: transparent;
+    color: var(--color-text-muted);
+  }
+
+  .button--secondary:hover:not(:disabled) {
+    border-color: var(--color-border-subtle);
+    color: var(--color-text-pure);
+  }
+
+  .button--ghost {
+    background: transparent;
+    color: var(--color-text-muted);
+  }
+
+  .button--ghost:hover:not(:disabled) {
+    color: var(--color-text-pure);
+  }
+
+  .skip-link {
+    position: absolute;
+    z-index: 50;
+    inset-block-start: var(--space-sm);
+    inset-inline-start: var(--space-sm);
+    transform: translateY(-200%);
+    border-radius: var(--radius-default);
+    background: var(--color-primary);
+    padding: var(--space-sm) var(--space-md);
+    color: var(--color-on-primary);
+  }
+
+  .skip-link:focus {
+    transform: translateY(0);
+  }
+
+  .error-state {
+    display: grid;
+    min-height: 60vh;
+    place-content: center;
+    justify-items: center;
+    gap: var(--space-lg);
+    padding: var(--space-xl);
+    text-align: center;
+  }
+
+  .error-state__message {
+    color: var(--color-text-muted);
+  }
+
+  .loading-state {
+    min-height: 60vh;
+  }
+
+  @media (min-width: 48rem) {
+    .container-shell {
+      padding-inline: var(--grid-margin-tablet);
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .container-shell {
+      padding-inline: var(--grid-margin);
+    }
+  }
+}
+
+/* Denser glass once the page scrolls, so text stays legible over content. */
+[data-scrolled="true"] {
+  --glass-fill: 0.16;
+  --glass-blur: 20px;
+}
+
+/* ---------- shared structure ---------- */
+
+.navbar-glass-bar,
+.navbar-glass-pill,
+.glass-control,
+.glass-panel,
+.glass-lens {
+  isolation: isolate;
+}
+
+.navbar-glass-bar::before,
+.navbar-glass-pill::before,
+.glass-control::before,
+.glass-panel::before,
+.glass-lens::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  border-radius: inherit;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      220px circle at var(--glass-x, 50%) var(--glass-y, -40%),
+      color-mix(in srgb, var(--color-primary) 18%, transparent),
+      transparent 70%
+    ),
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--color-primary) 12%, transparent),
+      color-mix(in srgb, var(--color-primary) 4%, transparent) 45%,
+      color-mix(
+        in srgb,
+        var(--color-glow-emerald, transparent) 14%,
+        transparent
+      )
+    );
+  -webkit-backdrop-filter: blur(var(--glass-blur))
+    saturate(var(--glass-saturate)) brightness(1.06);
+  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate))
+    brightness(1.06);
+  box-shadow:
+    inset 0 1px 1px color-mix(in srgb, var(--color-primary) 28%, transparent),
+    inset 0 -1px 1px rgb(0 0 0 / 0.25),
+    inset 0 0 22px color-mix(in srgb, var(--color-primary) 8%, transparent);
+  transition: --glass-spec 0.2s ease;
+}
+
+/* Rim light: a 1px gradient border that is bright at the top-left and
+   bottom-right corners, like light catching a bevelled edge. */
+.navbar-glass-pill::after,
+.glass-control::after,
+.glass-panel::after,
+.glass-lens::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  padding: 1px;
+  pointer-events: none;
+  background: linear-gradient(
+    135deg,
+    var(--glass-rim-strong),
+    var(--glass-rim-soft) 38%,
+    color-mix(in srgb, var(--color-primary) 4%, transparent) 62%,
+    color-mix(in srgb, var(--color-primary) 34%, transparent)
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+}
+
+/* ---------- per-surface tuning ---------- */
+
+.glass-control {
+  --glass-blur: 10px;
+}
+
+.glass-panel {
+  --glass-blur: 30px;
+  --glass-fill: 0.08;
+  --glass-spec: 0.1;
+}
+
+/* The lens sits inside the pill, which is already a backdrop root, so it
+   can't blur the page itself. It is only a lit, tinted bead of glass. */
+.glass-lens::before {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  background:
+    radial-gradient(
+      120% 160% at 50% -30%,
+      color-mix(in srgb, var(--color-primary) 35%, transparent),
+      transparent 60%
+    ),
+    color-mix(
+      in srgb,
+      var(--color-glow-emerald, white) 22%,
+      color-mix(in srgb, var(--color-primary) 6%, transparent)
+    );
+  box-shadow:
+    inset 0 1px 1px color-mix(in srgb, var(--color-primary) 42%, transparent),
+    inset 0 -2px 6px rgb(0 0 0 / 0.2),
+    0 4px 14px rgb(0 0 0 / 0.25);
+}
+
+/* Mobile bar: a single hairline highlight along the bottom edge. */
+.navbar-glass-bar::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  z-index: -1;
+  height: 1px;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in srgb, var(--color-primary) 34%, transparent),
+    transparent
+  );
+}
+
+.navbar-glass-bar::before {
+  border-radius: 0;
+}
+
+/* ---------- breakpoint switch (matches Tailwind `lg` = 64rem) ---------- */
+
+@media (min-width: 64rem) {
+  .navbar-glass-bar::before,
+  .navbar-glass-bar::after {
+    display: none;
+  }
+}
+
+@media (max-width: 63.999rem) {
+  .navbar-glass-pill::before,
+  .navbar-glass-pill::after {
+    display: none;
+  }
+}
+
+/* ---------- refraction (Chromium only; set via data-refraction) ---------- */
+
+[data-refraction="true"] .navbar-glass-bar::before,
+[data-refraction="true"] .navbar-glass-pill::before,
+[data-refraction="true"] .glass-control::before,
+[data-refraction="true"] .glass-panel::before {
+  -webkit-backdrop-filter: blur(calc(var(--glass-blur) * 0.6))
+    url(#liquid-glass-refraction) saturate(var(--glass-saturate))
+    brightness(1.06);
+  backdrop-filter: blur(calc(var(--glass-blur) * 0.6))
+    url(#liquid-glass-refraction) saturate(var(--glass-saturate))
+    brightness(1.06);
+}
+
+/* ---------- fallbacks ---------- */
+
+@supports not (
+  (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))
+) {
+  .navbar-glass-bar::before,
+  .navbar-glass-pill::before,
+  .glass-control::before,
+  .glass-panel::before {
+    background: var(--color-navigation-backdrop, rgb(10 12 14 / 0.9));
+  }
+}
+
+@media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
+  .navbar-glass-bar::before,
+  .navbar-glass-pill::before,
+  .glass-control::before,
+  .glass-panel::before {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    background: var(--color-carbon-base, #0b0d0f);
+  }
+}
+
+.button.glass-control {
+  border: 0;
+  background: transparent;
+  border-radius: 9999px;
+  color: var(--color-text-pure, #fff);
+  transition:
+    color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.button.glass-control::before,
+.button.glass-control::after {
+  transition: opacity 0.2s ease;
+}
+
+.button.glass-control:hover {
+  --glass-spec: 0.3;
+}
+
+.button.glass-control:active {
+  transform: scale(0.98);
+}
+
+/* Primary: emerald-tinted glass, the one loud surface. */
+.button.button--primary::before {
+  background:
+    radial-gradient(
+      220px circle at var(--glass-x, 50%) var(--glass-y, -40%),
+      color-mix(in srgb, var(--color-primary) 32%, transparent),
+      transparent 70%
+    ),
+    linear-gradient(
+      180deg,
+      color-mix(
+        in srgb,
+        var(--color-accent-emerald, var(--color-glow-emerald, #10b981)) 58%,
+        color-mix(in srgb, var(--color-primary) 24%, transparent)
+      ),
+      color-mix(
+        in srgb,
+        var(--color-accent-emerald, var(--color-glow-emerald, #10b981)) 32%,
+        transparent
+      )
+    );
+  box-shadow:
+    inset 0 1px 1px color-mix(in srgb, var(--color-primary) 45%, transparent),
+    inset 0 -1px 1px rgb(0 0 0 / 0.25),
+    inset 0 0 22px color-mix(in srgb, var(--color-primary) 12%, transparent),
+    0 6px 20px
+      color-mix(
+        in srgb,
+        var(--color-accent-emerald, var(--color-glow-emerald, #10b981)) 28%,
+        transparent
+      );
+}
+
+/* Secondary: neutral glass, inherits the default .glass-control look. */
+
+/* Ghost: no glass at rest, the surface condenses on hover and focus. */
+.button.button--ghost::before,
+.button.button--ghost::after {
+  opacity: 0;
+}
+
+.button.button--ghost:hover::before,
+.button.button--ghost:hover::after,
+.button.button--ghost:focus-visible::before,
+.button.button--ghost:focus-visible::after {
+  opacity: 1;
+}
+
+/* Disabled: flat and dim, no light following the cursor. */
+.button.glass-control:disabled,
+.button.glass-control[aria-disabled="true"] {
+  --glass-spec: 0;
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button.glass-control {
+    transition: color 0.2s ease;
+  }
+
+  .button.glass-control:active {
+    transform: none;
+  }
+}
+
+/* Services  */
+
+@property --rim-glow {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+/* ---------- card chrome ---------- */
+
+.service-card {
+  --mx: 50%;
+  --my: 0%;
+  isolation: isolate;
+  transition: --rim-glow 0.45s ease;
+}
+
+.service-card:hover {
+  --rim-glow: 1;
+}
+
+/* Spotlight that follows the pointer */
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.45s ease;
+  background: radial-gradient(
+    420px circle at var(--mx) var(--my),
+    color-mix(in srgb, var(--color-primary) 13%, transparent),
+    transparent 62%
+  );
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+/* 1px rim light, brighter near the pointer */
+.service-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  border-radius: inherit;
+  padding: 1px;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      260px circle at var(--mx) var(--my),
+      color-mix(
+        in srgb,
+        var(--color-primary) calc(var(--rim-glow) * 85%),
+        transparent
+      ),
+      transparent 70%
+    ),
+    linear-gradient(
+      145deg,
+      rgb(255 255 255 / 0.24),
+      rgb(255 255 255 / 0.06) 32%,
+      rgb(255 255 255 / 0.03) 66%,
+      rgb(255 255 255 / 0.15)
+    );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+}
+
+[dir="rtl"] .service-card::after {
+  background:
+    radial-gradient(
+      260px circle at var(--mx) var(--my),
+      color-mix(
+        in srgb,
+        var(--color-primary) calc(var(--rim-glow) * 85%),
+        transparent
+      ),
+      transparent 70%
+    ),
+    linear-gradient(
+      215deg,
+      rgb(255 255 255 / 0.24),
+      rgb(255 255 255 / 0.06) 32%,
+      rgb(255 255 255 / 0.03) 66%,
+      rgb(255 255 255 / 0.15)
+    );
+}
+
+/* Faint dot texture, like the reference */
+.service-card-dots {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(
+    rgb(255 255 255 / 0.08) 1px,
+    transparent 1.3px
+  );
+  background-size: 15px 15px;
+  -webkit-mask-image: radial-gradient(
+    ellipse 80% 70% at 50% 40%,
+    #000,
+    transparent
+  );
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, #000, transparent);
+}
+
+/* ---------- shared animation switches ---------- */
+
+.service-visual[data-active="false"] *,
+.service-visual[data-active="false"] *::before,
+.service-visual[data-active="false"] *::after {
+  animation-play-state: paused !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-visual *,
+  .service-visual *::before,
+  .service-visual *::after {
+    animation: none !important;
+  }
+}
+
+/* ---------- notification sheen ---------- */
+
+.service-sheen {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.service-sheen::before {
+  content: "";
+  position: absolute;
+  inset-block: -20%;
+  inset-inline-start: 0;
+  width: 38%;
+  background: linear-gradient(
+    100deg,
+    transparent,
+    rgb(255 255 255 / 0.14),
+    transparent
+  );
+  transform: translateX(-140%) skewX(-18deg);
+  animation: service-sheen 4.8s ease-in-out infinite;
+}
+
+[dir="rtl"] .service-sheen::before {
+  transform: translateX(140%) skewX(18deg);
+  animation-name: service-sheen-rtl;
+}
+
+@keyframes service-sheen {
+  0%,
+  55% {
+    transform: translateX(-140%) skewX(-18deg);
+  }
+  100% {
+    transform: translateX(380%) skewX(-18deg);
+  }
+}
+
+@keyframes service-sheen-rtl {
+  0%,
+  55% {
+    transform: translateX(140%) skewX(18deg);
+  }
+  100% {
+    transform: translateX(-380%) skewX(18deg);
+  }
+}
+
+/* ---------- ecosystem hexagons ---------- */
+
+.service-hex {
+  position: absolute;
+  clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+  background: linear-gradient(
+    150deg,
+    rgb(255 255 255 / 0.26),
+    rgb(255 255 255 / 0.05) 45%,
+    rgb(255 255 255 / 0.12)
+  );
+}
+
+.service-hex-face,
+.service-hex-wave,
+.service-hex-lit {
+  position: absolute;
+  inset: 1px;
+  clip-path: inherit;
+}
+
+.service-hex-face {
+  background: linear-gradient(
+    165deg,
+    color-mix(
+      in srgb,
+      var(--color-primary) calc(var(--b, 0.5) * 24%),
+      var(--color-surface-container)
+    ),
+    color-mix(
+      in srgb,
+      var(--color-primary) calc(var(--b, 0.5) * 8%),
+      var(--color-carbon-surface)
+    )
+  );
+}
+
+.service-hex-wave,
+.service-hex-lit {
+  background: radial-gradient(
+    circle at 50% 40%,
+    color-mix(in srgb, var(--color-primary) 46%, transparent),
+    transparent 76%
+  );
+}
+
+.service-hex-wave {
+  opacity: 0;
+  animation: service-hex-wave 9s ease-in-out infinite;
+  animation-delay: var(--d, 0s);
+}
+
+.service-hex-lit {
+  opacity: var(--lit, 0);
+  transition: opacity 0.25s ease;
+}
+
+.service-hex-icon {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: var(--color-primary);
+  opacity: calc(0.5 + var(--lit, 0) * 0.5);
+  transform: scale(calc(1 + var(--lit, 0) * 0.18));
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.service-hex-fade {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      ellipse 85% 70% at 0% 100%,
+      color-mix(in srgb, var(--color-carbon-surface) 96%, transparent) 20%,
+      transparent 70%
+    ),
+    linear-gradient(
+      0deg,
+      color-mix(in srgb, var(--color-carbon-surface) 92%, transparent) 0,
+      transparent 52%
+    );
+}
+
+[dir="rtl"] .service-hex-fade {
+  background:
+    radial-gradient(
+      ellipse 85% 70% at 100% 100%,
+      color-mix(in srgb, var(--color-carbon-surface) 96%, transparent) 20%,
+      transparent 70%
+    ),
+    linear-gradient(
+      0deg,
+      color-mix(in srgb, var(--color-carbon-surface) 92%, transparent) 0,
+      transparent 52%
+    );
+}
+
+@keyframes service-hex-wave {
+  0%,
+  26%,
+  100% {
+    opacity: 0;
+  }
+  8% {
+    opacity: 0.65;
+  }
+}
+
+.service-float {
+  animation: service-float 6s ease-in-out infinite;
+}
+
+@keyframes service-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-9%);
+  }
+}
+
+.service-drift {
+  animation: service-drift 14s ease-in-out infinite;
+}
+
+@keyframes service-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(6%, -4%, 0) scale(1.12);
+  }
+}
+
+.service-grid-sway {
+  animation: service-grid-sway 16s ease-in-out infinite;
+}
+
+@keyframes service-grid-sway {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0);
+  }
+  50% {
+    transform: translate3d(-1.2%, 1%, 0) rotate(0.8deg);
+  }
+}
+
+/* ---------- AI rings ---------- */
+
+.service-comet {
+  animation: service-comet var(--dur, 8s) linear infinite;
+  filter: drop-shadow(0 0 3px var(--color-primary));
+}
+
+.service-comet--rev {
+  animation-direction: reverse;
+}
+
+@keyframes service-comet {
+  to {
+    stroke-dashoffset: -1;
+  }
+}
+
+.service-breathe {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: service-breathe 5s ease-in-out infinite;
+}
+
+@keyframes service-breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.025);
+  }
+}
+
+.service-twinkle {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: service-twinkle 3.2s ease-in-out infinite;
+}
+
+@keyframes service-twinkle {
+  0%,
+  100% {
+    opacity: 0.1;
+    transform: scale(0.6);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+}
+
+/* ---------- analytics end dot ---------- */
+
+.service-halo {
+  animation: service-halo 2.6s ease-in-out infinite;
+}
+
+.service-ping {
+  animation: service-ping 2.6s ease-out infinite;
+}
+
+@keyframes service-halo {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.18);
+    opacity: 1;
+  }
+}
+
+@keyframes service-ping {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.9);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Who we serve */
+
+.who-orb[data-active="false"] *,
+.who-orb[data-active="false"] *::before,
+.who-orb[data-active="false"] *::after {
+  animation-play-state: paused !important;
+}
+
+.who-ping {
+  animation: who-ping 3s ease-out infinite;
+}
+
+@keyframes who-ping {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.7);
+    opacity: 0;
+  }
+}
+
+/* Squashing a full circle sideways reads as a meridian rotating around. */
+.who-meridian {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: who-meridian 6s ease-in-out infinite;
+}
+
+@keyframes who-meridian {
+  0%,
+  100% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(0.04);
+  }
+}
+
+/* ---------- accent bar on the market card ---------- */
+
+.who-bar {
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    var(--color-primary) 20%,
+    var(--color-primary) 80%,
+    transparent
+  );
+  box-shadow: 0 0 14px var(--color-primary);
+}
+
+.who-bar::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  height: 40%;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgb(255 255 255 / 0.85),
+    transparent
+  );
+  animation: who-bar 3.2s ease-in-out infinite;
+}
+
+@keyframes who-bar {
+  from {
+    transform: translateY(-120%);
+  }
+  to {
+    transform: translateY(320%);
+  }
+}
+
+/* ---------- background drift ---------- */
+
+.who-drift {
+  animation: who-drift 16s ease-in-out infinite;
+}
+
+@keyframes who-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(5%, -4%, 0) scale(1.12);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .who-ping,
+  .who-meridian,
+  .who-bar::after,
+  .who-drift {
+    animation: none !important;
+  }
+}
+
+/* our values  */
+
+.ov-scan {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.ov-scan::before {
+  content: "";
+  position: absolute;
+  inset-block: -30%;
+  inset-inline-start: 0;
+  width: 30%;
+  background: linear-gradient(
+    100deg,
+    transparent,
+    color-mix(in srgb, var(--color-primary) 22%, transparent),
+    rgb(255 255 255 / 0.14),
+    transparent
+  );
+  transform: translateX(-140%) skewX(-18deg);
+  animation: ov-scan 7s ease-in-out infinite;
+}
+
+[dir="rtl"] .ov-scan::before {
+  transform: translateX(140%) skewX(18deg);
+  animation-name: ov-scan-rtl;
+}
+
+@keyframes ov-scan {
+  0%,
+  60% {
+    transform: translateX(-140%) skewX(-18deg);
+  }
+  100% {
+    transform: translateX(440%) skewX(-18deg);
+  }
+}
+
+@keyframes ov-scan-rtl {
+  0%,
+  60% {
+    transform: translateX(140%) skewX(18deg);
+  }
+  100% {
+    transform: translateX(-440%) skewX(18deg);
+  }
+}
+
+/* Slow background drift */
+.ov-drift {
+  animation: ov-drift 16s ease-in-out infinite;
+}
+
+@keyframes ov-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(5%, -4%, 0) scale(1.12);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ov-scan::before,
+  .ov-drift {
+    animation: none !important;
+  }
+}
+
+/* ---------- header fill wipe ---------- */
+
+.xp-fill {
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.xp-title,
+.xp-desc,
+.xp-tag,
+.xp-chip {
+  transition:
+    color 0.35s ease 0.08s,
+    background-color 0.35s ease 0.08s,
+    border-color 0.35s ease 0.08s;
+}
+
+.xp-card:is(:hover, :focus-visible) .xp-fill {
+  transform: scaleY(1);
+}
+
+.xp-card:is(:hover, :focus-visible) .xp-title {
+  color: var(--color-carbon-base);
+}
+
+.xp-card:is(:hover, :focus-visible) .xp-desc {
+  color: color-mix(in srgb, var(--color-carbon-base) 78%, transparent);
+}
+
+.xp-card:is(:hover, :focus-visible) .xp-tag,
+.xp-card:is(:hover, :focus-visible) .xp-chip {
+  color: var(--color-carbon-base);
+  border-color: color-mix(in srgb, var(--color-carbon-base) 30%, transparent);
+  background-color: color-mix(
+    in srgb,
+    var(--color-carbon-base) 10%,
+    transparent
+  );
+}
+
+/* ---------- stacked layers behind the screenshot ---------- */
+
+.xp-layer {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: xp-bob 5s ease-in-out infinite;
+  animation-delay: var(--xp-d, 0s);
+}
+
+.xp-layer--1 {
+  transform: translateY(0);
+}
+
+.xp-layer--2 {
+  transform: translateY(0);
+  animation-direction: reverse;
+}
+
+.xp-card:is(:hover, :focus-visible) .xp-layer--1 {
+  transform: translateY(-0.5rem);
+}
+
+.xp-card:is(:hover, :focus-visible) .xp-layer--2 {
+  transform: translateY(-0.8rem);
+}
+
+/* `translate` is a separate property, so it never fights the fan-out above. */
+@keyframes xp-bob {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -3px;
+  }
+}
+
+/* ---------- screenshot pan and shine ---------- */
+
+.xp-shot {
+  transition:
+    object-position 2.4s cubic-bezier(0.45, 0, 0.2, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.xp-card:is(:hover, :focus-visible) .xp-shot {
+  object-position: bottom;
+  transform: scale(1.03);
+}
+
+.xp-shine::before {
+  content: "";
+  position: absolute;
+  inset-block: -20%;
+  inset-inline-start: 0;
+  z-index: 2;
+  width: 34%;
+  pointer-events: none;
+  background: linear-gradient(
+    100deg,
+    transparent,
+    color-mix(in srgb, var(--color-primary) 18%, transparent),
+    rgb(255 255 255 / 0.18),
+    transparent
+  );
+  transform: translateX(-140%) skewX(-18deg);
+}
+
+[dir="rtl"] .xp-shine::before {
+  transform: translateX(140%) skewX(18deg);
+}
+
+.xp-card:is(:hover, :focus-visible) .xp-shine::before {
+  transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateX(420%) skewX(-18deg);
+}
+
+[dir="rtl"] .xp-card:is(:hover, :focus-visible) .xp-shine::before {
+  transform: translateX(-420%) skewX(18deg);
+}
+
+/* ---------- arrow button ---------- */
+
+.xp-btn {
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease,
+    transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.xp-arrow-a,
+.xp-arrow-b {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  transition:
+    transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.3s ease;
+}
+
+.xp-arrow-b {
+  opacity: 0;
+  transform: translate(-140%, 140%);
+}
+
+[dir="rtl"] .xp-arrow-b {
+  transform: translate(140%, 140%);
+}
+
+.xp-card:is(:hover, :focus-visible) .xp-btn {
+  background-color: var(--color-primary);
+  color: var(--color-carbon-base);
+  transform: scale(1.06);
+  animation: xp-pulse 1.7s ease-out infinite;
+}
+
+.xp-card:is(:hover, :focus-visible) .xp-arrow-a {
+  opacity: 0;
+  transform: translate(140%, -140%);
+}
+
+[dir="rtl"] .xp-card:is(:hover, :focus-visible) .xp-arrow-a {
+  transform: translate(-140%, -140%);
+}
+
+.xp-card:is(:hover, :focus-visible) .xp-arrow-b {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+@keyframes xp-pulse {
+  0% {
+    box-shadow: 0 0 0 0
+      color-mix(in srgb, var(--color-primary) 55%, transparent);
+  }
+  100% {
+    box-shadow: 0 0 0 14px transparent;
+  }
+}
+
+/* ---------- section background drift ---------- */
+
+.xp-drift {
+  animation: xp-drift 16s ease-in-out infinite;
+}
+
+@keyframes xp-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(5%, -4%, 0) scale(1.12);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .xp-layer,
+  .xp-drift,
+  .xp-card:is(:hover, :focus-visible) .xp-btn {
+    animation: none !important;
+  }
+
+  .xp-shot,
+  .xp-fill,
+  .xp-layer,
+  .xp-arrow-a,
+  .xp-arrow-b {
+    transition-duration: 0.01ms !important;
+  }
+
+  .xp-card:is(:hover, :focus-visible) .xp-shot {
+    transform: none;
+  }
+
+  .xp-shine::before {
+    display: none;
+  }
+}
