@@ -20,10 +20,10 @@ import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import { useActiveSection } from "@/hooks/use-active-section";
 
 const SAAS_PRODUCT_URL =
-  "https://gymtech-web-prod.graysky-52897fef.uaenorth.azurecontainerapps.io/";
+  "https://saas.anansky.sa/";
 
   const WHATSAPP_AI_AGENT_PRODUCT_URL =
-  "https://whatsapp-agent.uaenorth.cloudapp.azure.com/whatsapp-agent/login";
+  "https://whatsapp-agent.anansky.sa/";
 
 const productLinks = [
   { translationKey: "saas", href: SAAS_PRODUCT_URL },
